@@ -1,0 +1,25 @@
+{
+  "name": "pitometer-azfunc",
+  "description": "",
+  "version": "0.1.0",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "prestart": "npm run build && func extensions install",
+    "start:host": "func start",
+    "start": "npm run start:host & npm run watch",
+    "build:production": "npm run prestart && npm prune --production",
+    "test": "echo \"No tests yet...\""
+  },
+  "dependencies": {
+    "@types/node": "^11.13.4",
+    "@pitometer/grader-threshold": "git+https://github.com/keptn/pitometer-grader-thresholds.git",
+    "@pitometer/pitometer": "git+https://github.com/keptn/pitometer.git",
+    "@pitometer/source-dynatrace": "git+https://github.com/keptn/pitometer-source-dynatrace.git",
+    "@pitometer/source-prometheus": "git+https://github.com/keptn/pitometer-source-prometheus.git"
+  },
+  "devDependencies": {
+    "@azure/functions": "^1.0.1-beta2",
+    "typescript": "^3.3.3"
+  }
+}
