@@ -136,7 +136,7 @@ You can run the app inside of Visual Studio Code using VSCODE tools for Azure Fu
 
 1. Follow the instructions to create your project and set your VSCODE environment to work with Azure Functions following this tutorial: https://code.visualstudio.com/tutorials/functions-extension/getting-started, You don`t need to create a new Functions project and publish it to Azure, We will do it later, but make sure that your environment is working correctly and the best way is following the tutorial until the end.
 
-2. Clone the repository and open the folder with VSCODE (set the folder as the root of your project in VSCODE).
+2. Clone THIS repository and select (open the folder with VSCODE) (set the folder as the root of your project in VSCODE).
 
 3. Run the following commands to make sure the Functions is working locally:
 
@@ -148,11 +148,19 @@ You can run the app inside of Visual Studio Code using VSCODE tools for Azure Fu
         ```
         npm start
         ```
-4. The Project should start and you will see in the terminal window the URLs of the functions APIs, use the http://localhost:7071/api/pitometer to send the equests, use the pitometer.rest in the sample folder in the project as a sample perfSpec file to your requests (this perfSpec is designed to use with Dynatrace tools if you want to create your own perfSpec file to integrate Prometheus or other telemetry tools feel free to share with us!).
+4. The Project should start and you will see in the terminal window the URLs of the functions APIs, use the http://localhost:7071/api/pitometer to send requests, use the pitometer.rest located at the project sample folder to send to your requests (this perfSpec is designed to use with Dynatrace tools if you want to create your own perfSpec file to integrate Prometheus or other telemetry tools feel free to share with us!).
 
-5. make post request using a tool like [Postman](https://www.getpostman.com/downloads/) or the [VS Code REST client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) and the [Complete Body example](samples/pitometer.rest)
+5. make a post request using a tool like [Postman](https://www.getpostman.com/downloads/) or the [VS Code REST client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) and the [Complete Body example](samples/pitometer.rest)
 
-6. Create the service Azure Functions App using the Azure Portal, VSCODE or Azure CLI, choose the best one for you and after create the service in Azure, deploy it using the VSCODE button ()Deploy to Function App...)  
+6. Create the service Azure Functions App using the Azure Portal, VSCODE or Azure CLI, choose the best one for you and after creating the service in Azure, deploy it using the VSCODE button ()Deploy to Function App...).
+
+Here are some ways to create the Azure Functions in Azure (this tutorial tested only with Windows Azure Functions v2.0):
+
+Creating the Function using VSCODE: https://docs.microsoft.com/pt-br/azure/azure-functions/functions-create-first-function-vs-code
+
+Create the Azure Functions using Azure Portal: https://docs.microsoft.com/pt-br/azure/azure-functions/functions-create-first-azure-function 
+
+Create the Azure Functions using Azure CLI: https://docs.microsoft.com/pt-br/azure/azure-functions/functions-create-first-azure-function-azure-cli 
 
 ### Option 2 - Code and Deploy everything with scripts and code
 
