@@ -157,7 +157,7 @@ DYNATRACE_BASEURL
 DYNATRACE_APITOKEN
 ```
 
-![CONFIGURING APPSETTINGS IN AZURE FUNCTIONS]()
+![CONFIGURING APPSETTINGS IN AZURE FUNCTIONS](https://github.com/dt-azure-demo/pitometer-azfunctions/blob/master/resources/localsettings.png)
 
 6. make a post request using a tool like [Postman](https://www.getpostman.com/downloads/) or the [VS Code REST client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) and the [Complete Body example](samples/pitometer.rest)
 
