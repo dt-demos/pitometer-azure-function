@@ -159,6 +159,25 @@ DYNATRACE_APITOKEN
 
 ![CONFIGURING APPSETTINGS IN AZURE FUNCTIONS](https://github.com/dt-azure-demo/pitometer-azfunctions/blob/master/resources/localsettings.png)
 
+If you don`t have created yet the Azure Function in Azure yet, you can modify in the local.settings.json locally and Upload the file after you updated it.
+
+```json
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "<YOUR AZURE STORAGE ACCOUNT>",
+    "FUNCTIONS_WORKER_RUNTIME": "node",
+    "FUNCTIONS_EXTENSION_VERSION": "~2",
+    "WEBSITE_NODE_DEFAULT_VERSION": "8.11.1",
+    "WEBSITE_CONTENTAZUREFILECONNECTIONSTRING": "<YOUR AZURE FILE STORAGE ACCOUNT>",
+    "WEBSITE_CONTENTSHARE": "pitfunc-content",
+    "WEBSITE_RUN_FROM_PACKAGE": "1",
+    "DYNATRACE_APITOKEN": "<YOUR DYNATRACE API TOKEN>",
+    "DYNATRACE_BASEURL": "<YOUR DYNATRACE BASE URL>"
+  }
+}
+```
+
 6. make a post request using a tool like [Postman](https://www.getpostman.com/downloads/) or the [VS Code REST client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) and the [Complete Body example](samples/pitometer.rest)
 
 7. Create the service Azure Functions App using the Azure Portal, VSCODE or Azure CLI, choose the best one for you and after creating the service in Azure, deploy it using the VSCODE button ()Deploy to Function App...).
