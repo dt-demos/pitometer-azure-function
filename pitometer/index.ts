@@ -36,8 +36,8 @@ const httpTrigger: AzureFunction = async function (context: Context, req: HttpRe
     }
 
     pitometer.addSource('Dynatrace', new DynatraceSource({
-    baseUrl: process.env.DYNATRACEURL,
-    apiToken: process.env.DYNATRACEKEY,
+    baseUrl: process.env.DYNATRACE_BASEURL,
+    apiToken: process.env.DYNATRACE_APITOKEN,
       
     }));
 
