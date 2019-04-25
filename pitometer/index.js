@@ -53,19 +53,19 @@ var httpTrigger = function (context, req) {
                     if (!perfSpec) {
                         context.res = {
                             status: 400,
-                            body: ({ status: 'error', message: 'Missing perfSpec. Please check your request body and try again.' })
+                            body: ({ result: 'error', message: 'Missing perfSpec. Please check your request body and try again.' })
                         };
                     }
                     if (!timeStart) {
                         context.res = {
                             status: 400,
-                            body: ({ status: 'error', message: 'Missing timeStart. Please check your request body and try again.' })
+                            body: ({ result: 'error', message: 'Missing timeStart. Please check your request body and try again.' })
                         };
                     }
                     if (!timeEnd) {
                         context.res = {
                             status: 400,
-                            body: ({ status: 'error', message: 'Missing timeEnd. Please check your request body and try again.' })
+                            body: ({ result: 'error', message: 'Missing timeEnd. Please check your request body and try again.' })
                         };
                     }
                     pitometer.addSource('Dynatrace', new DynatraceSource({
@@ -84,7 +84,7 @@ var httpTrigger = function (context, req) {
                         context.log("Result: " + telemetryErr.message);
                         context.res = {
                             status: 500,
-                            body: ({ status: 'error', message: telemetryErr.message })
+                            body: ({ result: 'error', message: telemetryErr.message })
                         };
                     }
                     else {
